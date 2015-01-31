@@ -93,13 +93,13 @@ void Mechanics::GetChoiceTurn()
     cout << "2. Buy a card." << endl;
     cin >> choice;
 }
-int Mechanics::FindDeckType() //Change later to check for each card type
+int Mechanics::FindDeckType(string choices) //Change later to check for each card type
 {
     for(int i = 0; i < deck.size(); i++)
     {
-        if()
+        if(deck.at(i).type == choices)
         {
-
+            return i;
         }
     }
 }
@@ -114,12 +114,21 @@ void Mechanics::DrawOne()
     cout << "3. Equipment" << endl;
     cout << "4. Money" << endl;
     cin >> choice;
-    for(int i = 0; i < deck.size(); i++)
+    if(choice == 1)
     {
-        if(choice == 1 && FindEmptyHand() < 10)
-        {
-            hand.at(FindEmptyHand()) = deck.at(i)
-        }
+        FindDeckType("Recruit");
+    }
+    else if(choice == 2)
+    {
+        FindDeckType("Hit");
+    }
+    else if(choice == 3)
+    {
+        FindDeckType("Equipment");
+    }
+    else if(choice == 4)
+    {
+        FindDeckType("Money");
     }
 }
 
