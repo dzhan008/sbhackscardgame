@@ -9,14 +9,15 @@ class Field
     public:
         Field();
         void updateField();
+        int FieldPositionEmpty();
 
     private:
         const int MAX_FIELD_SIZE = 5;
 
-        vector<Card> playerField(MAX_FIELD_SIZE);
-        vector<Card> oppField(MAX_FIELD_SIZE);
-        vector<Card> playerGraveyard;
-        vector<Card> oppGraveyard;
+        vector<Card::Recruit> playerField;
+        vector<Card::Recruit> oppField;
+        vector<Card::Recruit> playerGraveyard;
+        vector<Card::Recruit> oppGraveyard;
 
 };
 
