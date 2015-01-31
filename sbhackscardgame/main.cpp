@@ -12,3 +12,18 @@ int main()
 
     return 0;
 }
+
+/*
+int main()
+{
+    int choice;
+    cout << "Welcome to SB Hacks Card Game!" << endl;
+    cout << "What would you like to do?" << endl;
+    cout << "1. Play" << endl;
+    cout << "2. Instructions" << endl;
+    cout << "3. Exit" << endl;
+
+    cin >> choice;
+
+}
+

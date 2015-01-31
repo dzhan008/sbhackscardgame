@@ -14,10 +14,10 @@ class Field
     private:
         const int MAX_FIELD_SIZE = 5;
 
-        vector<Card::Recruit> playerField;
-        vector<Card::Recruit> oppField;
-        vector<Card::Recruit> playerGraveyard;
-        vector<Card::Recruit> oppGraveyard;
+        vector<Card> playerField;
+        vector<Card> oppField;
+        vector<Card> playerGraveyard;
+        vector<Card> oppGraveyard;
 
 };
 
