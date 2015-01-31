@@ -32,7 +32,7 @@ private:
     int getAtk();
     int getHP();
     int setHP(int HP);
-    int credits = 500;
+    int credits;
 
     void attack(Card);
 
