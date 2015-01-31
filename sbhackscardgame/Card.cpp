@@ -25,6 +25,13 @@ const Recruit Recruit::Attack(Recruit &Target)
     return Target;
 
 }
+void Recruit::displayStats()
+{
+    cout << "Name: " << name << endl;
+    cout << "Hp: " << Health << endl;
+    cout << "Atk: " << Atk << endl;
+    cout << "Cost: " << Cost << endl;
+}
 //Private Function
  Recruit Recruit::isDead(Recruit &Unit)
 {

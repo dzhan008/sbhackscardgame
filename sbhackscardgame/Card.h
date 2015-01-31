@@ -12,6 +12,7 @@ public:
     //Multiple Constructors for different units maybe
     inline Recruit( const string Name, const int hp, const int atk, const int cost);
     inline const Recruit Attack(Recruit &);
+    inline void displayStats();
 private:
     int Health;
     int Atk;
