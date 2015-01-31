@@ -19,7 +19,7 @@ private:
     int Atk;
     int Cost;
     string name;
-    inline Recruit isDead( Recruit &) const;
+    bool isDead;
 
 
 };
