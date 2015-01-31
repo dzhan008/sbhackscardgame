@@ -13,6 +13,7 @@ class Mechanics
         int FindEmptyField();
         void GetChoiceStart();
         void GetChoiceTurn();
+        int Mechanics::FindDeckType();
         void DrawOne();
         Card ChooseCard();
         void PlayCard();
