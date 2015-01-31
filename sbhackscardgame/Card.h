@@ -2,6 +2,7 @@
 #define CARD_H_INCLUDED
 #include <string.h>
 #include "Player.h"
+
 using namespace std;
 
 class Card
@@ -18,7 +19,8 @@ private:
             inline Recruit();
             //Multiple Constructors for different units maybe
             inline Recruit( string Name, const int hp, const int atk, const int cost);
-            inline const Recruit Attack(Card &);
+            inline Recruit Attack(Card::Recruit &);
+            inline int updateHealth(int);
             inline void displayStats();
             inline void displayName();
 
