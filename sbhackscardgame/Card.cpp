@@ -66,5 +66,18 @@ void Card::attack(Card target)
     cout << Health << " " << target.Health;
 }
 
+bool Card::isDead(Card target)
+{
+    if(target.Health == 0)
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+
+}
+
 
 
