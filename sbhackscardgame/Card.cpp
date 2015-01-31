@@ -4,44 +4,67 @@
 
 using namespace std;
 
-<<<<<<< HEAD
-Card::Recruit::Recruit()
+Card::Recruit()
 {
-    name = "Default on Loans David";
-    Health = 1;
+    Health = 2;
     Atk = 1;
-    Cost = 100;
-    isDead = false;
+    type = "Recruit";
+
 }
-Card::Recruit::Recruit(string Name, const int hp, const int atk, const int cost)
+
+Card::Card(int HP, int Atk)
 {
-    name = Name;
-    Health = hp;
-    Atk = atk;
-    Cost = cost;
-    isDead = false;
+    Health = HP;
+    this->Atk = Atk;
 }
-void Card::Recruit::displayStats()
+
+Card::HitCard()
 {
-    cout << "Name: " << name << endl;
-    cout << "Health: " << Health << endl;
-    cout << "Atk: " << Atk << endl;
-    cout << "Cost: " << Cost << endl;
+    type = "Hit";
 }
 
+Card::Money()
+{
+    type = "Money";
+}
 
+Card::Equipment()
+{
+    type = "Equipment";
+}
 
-
-
-=======
 Card::Card()
 {
-    Health = 0;
-    Atk = 0;
-    Cost = 0;
-    name = "card";
-
+    Health = 20;
+    type = "Player";
+    credits = 500;
 }
->>>>>>> origin/master
+
+Card::getAtk()
+{
+    return Atk;
+}
+
+Card::getHP()
+{
+    return Health;
+}
+
+Card::setHP(int HP)
+{
+    Health = HP;
+
+    return Health;
+}
+
+void Card::attack(Card target)
+{
+    Health = setHP(Health - target.Atk);
+
+    target.Health = target.Health - Atk;
+
+    cout << Health << " " << target.Health;
+}
+
 
 

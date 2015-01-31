@@ -8,27 +8,35 @@ using namespace std;
 class Card
 {
 private:
-    //Constructor
-<<<<<<< HEAD
+        int Health;
+        int Atk;
+        int Cost;
+        string name;
+        bool isDead;
 
-    inline Recruit();
+
+    string type;
+
+
+
+    public:
+    //Constructor
+    inline Card(); //Default for player
+     Recruit();
+     Card(int, int); //Constructor for recruits
     inline HitCard();
     inline Money();
     inline Equipment();
 
-    public:
-=======
-    int Health;
-    int Atk;
-    int Cost;
-    string name;
-    public:
-    Card();
 
-        //Constructor
->>>>>>> origin/master
+    int getAtk();
+    int getHP();
+    int setHP(int HP);
+    int credits = 500;
 
-    string type;
+    void attack(Card);
+
+
 };
 
 #endif // CARD_H_INCLUDED

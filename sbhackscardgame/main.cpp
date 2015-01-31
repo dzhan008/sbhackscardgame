@@ -1,14 +1,16 @@
 #include <iostream>
 #include "Card.h"
-#include "Card.cpp"
 #include "Player.h"
 using namespace std;
 
 int main()
 {
     cout << "Hello world!" << endl;
-    Card::Recruit monster;
-    monster.displayStats();
+    Card a = Card(5, 2);
+    Card b = Card(1, 1);
+
+    a.attack(b);
+
 
     return 0;
 }
@@ -26,4 +28,4 @@ int main()
     cin >> choice;
 
 }
-
+*/
