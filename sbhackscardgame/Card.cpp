@@ -4,6 +4,7 @@
 
 using namespace std;
 
+<<<<<<< HEAD
 Card::Recruit::Recruit()
 {
     name = "Default on Loans David";
@@ -32,5 +33,15 @@ void Card::Recruit::displayStats()
 
 
 
+=======
+Card::Card()
+{
+    Health = 0;
+    Atk = 0;
+    Cost = 0;
+    name = "card";
+
+}
+>>>>>>> origin/master
 
 

@@ -93,6 +93,16 @@ void Mechanics::GetChoiceTurn()
     cout << "2. Buy a card." << endl;
     cin >> choice;
 }
+int Mechanics::FindDeckType() //Change later to check for each card type
+{
+    for(int i = 0; i < deck.size(); i++)
+    {
+        if()
+        {
+
+        }
+    }
+}
 void Mechanics::DrawOne()
 {
     hand.at(FindEmptyHand()) = deck.back();

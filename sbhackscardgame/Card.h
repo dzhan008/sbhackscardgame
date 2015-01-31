@@ -9,6 +9,7 @@ class Card
 {
 private:
     //Constructor
+<<<<<<< HEAD
 
     inline Recruit();
     inline HitCard();
@@ -16,6 +17,16 @@ private:
     inline Equipment();
 
     public:
+=======
+    int Health;
+    int Atk;
+    int Cost;
+    string name;
+    public:
+    Card();
+
+        //Constructor
+>>>>>>> origin/master
 
     string type;
 };
