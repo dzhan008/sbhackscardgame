@@ -2,6 +2,7 @@
 #define FIELD_H
 #include <vector>
 #include "Card.h"
+#include "Recruit.h"
 
 
 class Field
@@ -14,8 +15,8 @@ class Field
     private:
         const int MAX_FIELD_SIZE = 5;
 
-        vector<Card> playerField;
-        vector<Card> oppField;
+        vector<Recruit> playerField;
+        vector<Recruit> oppField;
         vector<Card> playerGraveyard;
         vector<Card> oppGraveyard;
 

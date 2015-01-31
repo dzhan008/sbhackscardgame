@@ -15,11 +15,20 @@ class Recruit
             inline void displayName();
 
         private:
-            int Health;
-            int Atk;
-            int Cost;
-            string name;
-            bool isDead;
+
+            struct Recruits
+            {
+                int Health;
+                int Atk;
+                int Cost;
+                bool isDead;
+                string name;
+            };
+            //int Health;
+            //int Atk;
+            //int Cost;
+            //string name;
+           // bool isDead;
     };
 
 

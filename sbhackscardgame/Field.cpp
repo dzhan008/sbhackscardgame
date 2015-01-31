@@ -14,7 +14,7 @@ void Field::updateField()
 {
     for(int i = 0; i < playerField.size(); ++i)
     {
-        if(playerField.at(i).isDead)
+        if(playerField.at(i).Recruits.isDead)
         {
             while(playerField.at(i).Recruit.isDead())
             {

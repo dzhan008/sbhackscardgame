@@ -1,18 +1,18 @@
 #include <iostream>
-#include "Recruit.h"
+#include "Card.h"
 #include <string>
 
 using namespace std;
 
-Recruit::Recruit()
+Card::Recruit::Recruit()
 {
-    Recruits.name = "Default on Loans David";
+    name = "Default on Loans David";
     Health = 1;
     Atk = 1;
     Cost = 100;
     isDead = false;
 }
-Recruit::Recruit(string Name, const int hp, const int atk, const int cost)
+Card::Recruit::Recruit(string Name, const int hp, const int atk, const int cost)
 {
     name = Name;
     Health = hp;
@@ -20,13 +20,17 @@ Recruit::Recruit(string Name, const int hp, const int atk, const int cost)
     Cost = cost;
     isDead = false;
 }
-void Recruit::displayStats()
+void Card::Recruit::displayStats()
 {
     cout << "Name: " << name << endl;
     cout << "Health: " << Health << endl;
     cout << "Atk: " << Atk << endl;
     cout << "Cost: " << Cost << endl;
 }
+
+
+
+
 
 
 
