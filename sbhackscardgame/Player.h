@@ -7,6 +7,7 @@ class Player
 {
     public:
         Player(); //Default Constructor
+        int updateHealth(int);
 
     private:
         int health; //The amount of health a player has
