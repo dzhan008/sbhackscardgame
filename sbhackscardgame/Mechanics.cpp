@@ -142,7 +142,15 @@ void Mechanics::PlayCard
         playerField
     }
 }
+void Mechanics::BuyCard()
+{
+
+}
 bool Mechanics::TurnEnd()
 {
     if()
+}
+void Mechanics::EndTurn()
+{
+
 }
