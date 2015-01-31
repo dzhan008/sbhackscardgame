@@ -16,7 +16,6 @@ private:
         int Atk;
         int Cost;
         string name;
-        bool isDead;
 
 
     string type;
@@ -38,6 +37,7 @@ private:
     int getHP();
     int setHP(int HP);
     int credits;
+    bool isDead();
 
     void attack(Card);
 
