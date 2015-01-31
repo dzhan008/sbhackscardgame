@@ -6,10 +6,10 @@ using namespace std;
 
 class Card
 {
-public:
+private:
     //Constructor
 
-    private:
+    public:
 
     class Recruit
     {
@@ -18,10 +18,10 @@ public:
             inline Recruit();
             //Multiple Constructors for different units maybe
             inline Recruit( string Name, const int hp, const int atk, const int cost);
-            inline const Recruit Attack(Recruit &);
+            inline const Recruit Attack(Card &);
             inline void displayStats();
             inline void displayName();
-            inline const Recruit DirectAttack(Player &);
+
         private:
             int Health;
             int Atk;
@@ -56,6 +56,15 @@ public:
             int cost;
 
             int dmg;
+    };
+    class Money
+    {
+        public:
+
+        private:
+            int credits;
+
+
     };
 
 
