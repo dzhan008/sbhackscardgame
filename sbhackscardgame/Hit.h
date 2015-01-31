@@ -4,10 +4,13 @@
 class HitCard()
 {
     public:
+        //Constructor
         HitCard();
+        //Instant Kill Function
         void Kill();
     private:
         int cost;
+
         int dmg;
 };
 

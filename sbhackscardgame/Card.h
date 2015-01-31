@@ -4,7 +4,9 @@
 class Recruit()
 {
 public:
+    //Constructor
     Recruit();
+    //Multiple Constructors for different units maybe
     Recruit( unsigned x);
 private:
     int Health;
