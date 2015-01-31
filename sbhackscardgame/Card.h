@@ -35,29 +35,29 @@ private:
     {
     public:
         //Constructor
-        Equipment();
+        inline Equipment();
         //Buffs and Debuff Unit(s)
-        void Enhancement();
+        inline void Enhancement();
         //Instant kill effects or destroys other cards.
-        void Destruction();
+        inline void Destruction();
         //Increases Resources
-        void GenerateGold();
+        inline void GenerateGold();
     private:
         //cost = cost to play
-        int cost;
+        int Cost;
 
     };
     class HitCard
     {
         public:
             //Constructor
-            HitCard();
+            inline HitCard();
             //Instant Kill Function
-            void Kill();
+            inline void Kill();
         private:
-            int cost;
+            int Cost;
 
-            int dmg;
+            int Dmg;
     };
     class Money
     {

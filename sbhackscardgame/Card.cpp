@@ -27,6 +27,15 @@ void Card::Recruit::displayStats()
     cout << "Atk: " << Atk << endl;
     cout << "Cost: " << Cost << endl;
 }
+Card::Equipment::Equipment()
+{
+    Cost = 1000;
+}
+Card::HitCard::HitCard()
+{
+    Cost = 1000;
+    Dmg = 10;
 
+}
 
 
