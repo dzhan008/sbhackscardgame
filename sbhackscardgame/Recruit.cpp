@@ -1,10 +1,10 @@
 #include <iostream>
-#include "Card.h"
+#include "Recruit.h"
 #include <string>
 
 using namespace std;
 
-Card::Recruit::Recruit()
+Recruit::Recruit()
 {
     name = "Default on Loans David";
     Health = 1;
@@ -12,7 +12,7 @@ Card::Recruit::Recruit()
     Cost = 100;
     isDead = false;
 }
-Card::Recruit::Recruit(string Name, const int hp, const int atk, const int cost)
+Recruit::Recruit(string Name, const int hp, const int atk, const int cost)
 {
     name = Name;
     Health = hp;
@@ -20,7 +20,7 @@ Card::Recruit::Recruit(string Name, const int hp, const int atk, const int cost)
     Cost = cost;
     isDead = false;
 }
-void Card::Recruit::displayStats()
+void Recruit::displayStats()
 {
     cout << "Name: " << name << endl;
     cout << "Health: " << Health << endl;
@@ -29,8 +29,11 @@ void Card::Recruit::displayStats()
 }
 
 
+<<<<<<< HEAD:sbhackscardgame/Card.cpp
 
 
 
 
 
+=======
+>>>>>>> origin/master:sbhackscardgame/Recruit.cpp
