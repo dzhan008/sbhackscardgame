@@ -9,10 +9,12 @@ class Mechanics
         void DisplayDeck(vector<Card> &) const;
         void DisplayHand(vector<Card> &) const;
         void ShuffleDeck(vector<Card> &);
+        int FindEmptyHand();
+        int FindEmptyField();
         void GetChoiceStart();
         void GetChoiceTurn();
-        void DrawTwo(int);
-        void DrawOne(int);
+        void DrawOne();
+        Card ChooseCard();
         void PlayCard();
         void BuyCard();
         bool TurnEnd();

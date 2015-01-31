@@ -1,17 +1,16 @@
 #include "Mechanics.h"
 #include "Card.h"
+#include "Field.h"
+#include <iostream>
 
 using namespace std;
 
 Mechanics::Mechanics()
 {
-    //Card c will construct a card with default 0 parameters
     Card c;
-    //deck will have cards initialized to 0
     vector<Card> deck;
     vector<Card> hand;
 }
-
 void Mechanics::DisplayDeck(vector<Card> &deck const)
 {
     for(int i = 0, i < deck.size(); i++)
@@ -23,7 +22,7 @@ void Mechanics::DisplayHand(vector<Card> &hand const)
 {
     for(int i = 0, i < hand.size(); i++)
     {
-        cout << hand.at(i) << endl;
+        cout << i + 1 << ": " << hand.at(i) << endl;
     }
 }
 void Mechanics::ShuffleDeck(vector<Card> &deck)
@@ -43,14 +42,50 @@ void Mechanics::ShuffleDeck(vector<Card> &deck)
         deck.size() - 1 = temp;
     }
 }
+int Mechanics::FindEmptyHand()
+{
+    for(int i = 0; i < hand.size(); i++)
+    {
+        if(hand.at(i).health == 0)
+        {
+            return i;
+        }
+    }
+    return 10;
+}
+int Mechanics::FindEmptyField()
+{
+    for(int i = 0; i < playerField.size(); i++)
+    {
+        if(playerField.at(i).health == 0)
+        {
+            return i;
+        }
+    }
+    return 5;
+}
 void Mechanics::GetChoiceStart()
 {
     cout << "Make your choice:" << endl;
     cout << "1. Draw two random cards." << endl;
     cout << "2. Draw one random card and one type card." << endl;
     cin >> choice;
+    if(choice == 1)
+    {
+        //While there remains space in the hand,
+        //draw a card from the deck and add it onto the hand
+        while(FindEmptyHand() < 10)
+        {
+            hand.at(FindEmptyHand()) = deck.back();
+            deck.back().cost = 0;
+            deck.back().health = 0;
+        }
+    }
+    else if(choice == 2)
+    {
+        DrawOne();
+    }
 }
-
 void Mechanics::GetChoiceTurn()
 {
     cout << "Make your choice:" << endl;
@@ -58,17 +93,11 @@ void Mechanics::GetChoiceTurn()
     cout << "2. Buy a card." << endl;
     cin >> choice;
 }
-void Mechanics::DrawTwo(int choice)
+void Mechanics::DrawOne()
 {
-    hand.push_back(deck.back());
-    hand.push_back(deck.back());
-    deck.pop_back();
-    deck.pop_back();
-}
-void Mechanics::DrawOne(int choice)
-{
-    hand.push_back(deck.back());
-    deck.pop_back();
+    hand.at(FindEmptyHand()) = deck.back();
+    deck.back().cost = 0;
+    deck.back().health = 0;
     cout << "Choose type of card to draw." << endl;
     cout << "1. Recruit" << endl;
     cout << "2. Hit" << endl;
@@ -77,9 +106,33 @@ void Mechanics::DrawOne(int choice)
     cin >> choice;
     for(int i = 0; i < deck.size(); i++)
     {
-        if(choice == 1)
+        if(choice == 1 && FindEmptyHand() < 10)
         {
-
+            hand.at(FindEmptyHand()) = deck.at(i)
         }
     }
+}
+
+Card Mechanics::ChooseCard()
+{
+    int cardHand;
+    cout << "Enter number corresponding with card position." << endl;
+    DisplayHand();
+    cin >> cardHand;
+    return hand.at(cardHand - 1);
+}
+void Mechanics::PlayCard
+{
+    if(FindEmptyField)
+    {
+        cout << "Field full. Cannot play card." << endl;
+    }
+    else
+    {
+        playerField
+    }
+}
+bool Mechanics::TurnEnd()
+{
+    if()
 }
