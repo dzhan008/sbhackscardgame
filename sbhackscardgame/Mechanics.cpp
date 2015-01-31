@@ -91,7 +91,20 @@ void Mechanics::GetChoiceTurn()
     cout << "Make your choice:" << endl;
     cout << "1. Play a card." << endl;
     cout << "2. Buy a card." << endl;
+    cout << "3. End your turn." << endl;
     cin >> choice;
+    if(choice == 1)
+    {
+        ChooseCard();
+    }
+    else if(choice == 2)
+    {
+        BuyCard();
+    }
+    else if(choice == 3) //switch to other player
+    {
+        cout << "Player 2's turn:" << endl;
+    }
 }
 int Mechanics::FindDeckType(string choices) //Change later to check for each card type
 {
@@ -106,29 +119,45 @@ int Mechanics::FindDeckType(string choices) //Change later to check for each car
 void Mechanics::DrawOne()
 {
     hand.at(FindEmptyHand()) = deck.back();
-    deck.back().cost = 0;
-    deck.back().health = 0;
+    deck.pop_back();
     cout << "Choose type of card to draw." << endl;
     cout << "1. Recruit" << endl;
     cout << "2. Hit" << endl;
     cout << "3. Equipment" << endl;
     cout << "4. Money" << endl;
     cin >> choice;
+    int x;
     if(choice == 1)
     {
-        FindDeckType("Recruit");
+        x = FindDeckType("Recruit");
+        hand.at(FindEmptyHand()) = deck.at(x);
+        deck.at(x).cost = deck.back().cost;
+        deck.at(x).health = deck.back().health;
+        deck.pop_back();
     }
     else if(choice == 2)
     {
-        FindDeckType("Hit");
+        x = FindDeckType("Hit");
+        hand.at(FindEmptyHand()) = deck.at(x);
+        deck.at(x).cost = deck.back().cost;
+        deck.at(x).health = deck.back().health;
+        deck.pop_back();
     }
     else if(choice == 3)
     {
-        FindDeckType("Equipment");
+        x = FindDeckType("Equipment");
+        hand.at(FindEmptyHand()) = deck.at(x);
+        deck.at(x).cost = deck.back().cost;
+        deck.at(x).health = deck.back().health;
+        deck.pop_back();
     }
     else if(choice == 4)
     {
-        FindDeckType("Money");
+        x = FindDeckType("Money");
+        hand.at(FindEmptyHand()) = deck.at(x);
+        deck.at(x).cost = deck.back().cost;
+        deck.at(x).health = deck.back().health;
+        deck.pop_back();
     }
 }
 
@@ -142,18 +171,21 @@ Card Mechanics::ChooseCard()
 }
 void Mechanics::PlayCard
 {
-    if(FindEmptyField)
+    int empty;
+    if(FindEmptyField() == 5)
     {
         cout << "Field full. Cannot play card." << endl;
     }
     else
     {
-        playerField
+        empty = FindEmptyField();
+        playerField.at(empty) = hand.at(ChooseCard());
     }
 }
 void Mechanics::BuyCard()
 {
-
+    cout << "Cannot buy card." << endl;
+    GetChoiceTurn();
 }
 bool Mechanics::TurnEnd()
 {

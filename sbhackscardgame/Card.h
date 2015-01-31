@@ -9,7 +9,7 @@ class Card
 {
 private:
     //Constructor
-<<<<<<< HEAD
+//<<<<<<< HEAD
 
     inline Recruit();
     inline HitCard();
