@@ -14,8 +14,6 @@ class Recruit
             inline void displayStats();
             inline void displayName();
 
-        private:
-
             struct Recruits
             {
                 int Health;
@@ -24,6 +22,10 @@ class Recruit
                 bool isDead;
                 string name;
             };
+
+        private:
+
+
             //int Health;
             //int Atk;
             //int Cost;
