@@ -7,9 +7,10 @@ class Mechanics
     public:
         Mechanics();
         void DisplayDeck(vector<Card> &) const;
-        void DsiplayHand(vector<Card> &) const;
-        int GetChoiceStart();
-        int GetChoiceTurn();
+        void DisplayHand(vector<Card> &) const;'
+        void ShuffleDeck(vector<Card> &);
+        void GetChoiceStart();
+        void GetChoiceTurn();
         void DrawTwo(int);
         void DrawOne(int);
         void PlayCard();
