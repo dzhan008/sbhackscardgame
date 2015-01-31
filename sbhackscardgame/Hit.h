@@ -1,0 +1,14 @@
+#ifndef HIT_H_INCLUDED
+#define HIT_H_INCLUDED
+
+class HitCard()
+{
+    public:
+        HitCard();
+        void Kill();
+    private:
+        int cost;
+        int dmg;
+};
+
+#endif // HIT_H_INCLUDED
