@@ -8,10 +8,9 @@ using namespace std;
 class Card
 {
 private:
-<<<<<<< HEAD
+
     //Constructor
-//<<<<<<< HEAD
-=======
+
         int Health;
         int Atk;
         int Cost;
@@ -19,7 +18,6 @@ private:
 
 
     string type;
->>>>>>> origin/master
 
 
 
@@ -37,7 +35,7 @@ private:
     int getHP();
     int setHP(int HP);
     int credits;
-    bool isDead();
+    bool isDead(Card);
 
     void attack(Card);
 
