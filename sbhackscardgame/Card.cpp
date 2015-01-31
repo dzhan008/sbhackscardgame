@@ -21,6 +21,13 @@ Card::Recruit::Recruit(string Name, const int hp, const int atk, const int cost)
     Cost = cost;
     isDead = false;
 }
+void Card::Recruit::displayStats()
+{
+    cout << "Name: " << name << endl;
+    cout << "Health: " << Health << endl;
+    cout << "Atk: " << Atk << endl;
+    cout << "Cost: " << Cost << endl;
+}
 
 
 

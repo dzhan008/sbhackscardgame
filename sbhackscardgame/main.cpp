@@ -7,6 +7,8 @@ using namespace std;
 int main()
 {
     cout << "Hello world!" << endl;
+    Card::Recruit monster;
+    monster.displayStats();
 
     return 0;
 }
